@@ -4,4 +4,4 @@ Asir1
 
 ## HTML
 
-###Ejercicio 1 https://github.com/aitzolsoto/lenguaje_de_marcas/blob/master/Proyecto_marca.html
+###Ejercicio 1 https://aitzolsoto.github.io/lenguaje_de_marcas/Proyecto_marca.html
