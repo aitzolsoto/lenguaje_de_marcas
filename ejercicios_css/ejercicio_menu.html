@@ -13,12 +13,18 @@
             float: left;
         }
 
-        li a {
+        .ref {
             display: inline-block;
              color: white;
             text-align: center;
             padding: 14px 120px;
              text-decoration: none;
+        }
+
+        .menu_articulo{
+            list-style-type: none;
+            color: black;
+            
         }
 
         li a:hover{
@@ -61,19 +67,27 @@
        
         <div class="clearfix">
         <ul class="menu">
-            <li class="contenido_izq"><a href="Futbol" class="espacio">Futbol</a></li>
-            <li class="fondo_naranja contenido_izq"><a href="Baloncesto">Baloncesto</a></li>
-            <li class="fondo_rojo contenido_izq"><a href="Motor">Motor</a></li>
-            <li class="fondo_gris contenido_izq"><a href="Polideportivo">Polideportivo</a></li>
-            <li class="fondo_azul contenido_izq"><a href="Mas+">Mas+</a></li>
+            <li class="contenido_izq"><a href="Futbol" class="ref">Futbol</a></li>
+            <li class="fondo_naranja contenido_izq"><a href="Baloncesto" class="ref">Baloncesto</a></li>
+            <li class="fondo_rojo contenido_izq"><a href="Motor" class="ref">Motor</a></li>
+            <li class="fondo_gris contenido_izq"><a href="Polideportivo" class="ref">Polideportivo</a></li>
+            <li class="fondo_azul contenido_izq"><a href="Mas+" class="ref">Mas+</a></li>
         </ul>
         </div>
 
         <div align="center">
             <div>
                <div>
-                    <ul>
-                        <li><h2>Atletismo</h2></li>
+                    <ul class="menu_articulo">
+                        <li class="contenido_izq">
+                            
+                            <h2>Atletismo</h2>
+                            <img src="img_marca/kipchoge2.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <h2>Futbol</h2>
+                        </li>
                     </ul>
 
                 </div>
