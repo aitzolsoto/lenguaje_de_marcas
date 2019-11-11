@@ -4,8 +4,7 @@
         <meta charset="UTF-8">
         <style>
         div{
-            padding: 20px;
-            margin: 20px;
+           padding: 10px; 
         }
 
         .uno{
@@ -16,26 +15,45 @@
             background-color: blue;
             color: brown;
         }
+
+        .tamaño{
+            width: 50%
+        }
+
+        .tamaño2{
+            width: 40%
+        }
+
+        .margen{
+            margin: 650px;
+        }
+        
+        .fondo{
+            
+            
+        }
         </style>
     </head>
-    <body>
+    <!--background-image: url(carpeta/foto.jpg)
+        background-repeat: no-repeat-->
+    <body class="margen fondo">
         <div>
             <div class="uno">
-                <h2>Messi</h2>
-                <img src="img_css/messi.jpg">
-                <p>Es un futbolista argentino que juega como delantero o centrocampista</p>
+                <div><h2>Messi</h2></div>
+                <div><img src="img_css/messi.jpg" class="tamaño"></div>
+                <div><p>Es un futbolista argentino que juega como delantero o centrocampista</p></div>
             </div>
     
             <div class="dos">
-                <img src="img_css/suarez.jpg">
-                <h2>Messi</h2>
-                <p>Es un futbolista uruguayo-italiano que juega como delantero en el Fútbol Club Barcelona</p>
+                <div><img src="img_css/suarez.jpg" class="tamaño"></div>
+                <div><h2>Messi</h2></div>
+                <div><p>Es un futbolista uruguayo-italiano que juega como delantero en el Fútbol Club Barcelona</p></div>
             </div>
            
             <div class="uno">
-                <p>Es un futbolista francès que juega como delantero en el Fútbol Club Barcelona</p>
-                <h2>Griezmann</h2>
-                <img src="img_css/griezmann.jpg">
+                <div><p>Es un futbolista francès que juega como delantero en el Fútbol Club Barcelona</p></div>
+                <div><h2>Griezmann</h2></div>
+                <div><img src="img_css/griezmann.jpg" class="tamaño2"></div>
             </div>
         </div>    
     </body>

@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Ejercicio div</title>
+        <meta charset="UTF-8">
+        <style>
+       
+
+        .horizontal{
+            float: left;
+            padding: 30px;
+            margin: 20px;
+        }
+
+        
+
+        .anulado{
+            clear: right;
+        }
+
+        .fondo_amarillo{
+            background-color: rgb(245, 89, 17);
+        }
+
+        .fondo_rojo{
+            background-color: rgb(255, 000,000)
+        }
+
+        .fondo_morado{
+            background-color: rgb(145, 53, 231)
+        }
+
+        .fondo_azul{
+            background-color: rgb(9, 63, 243)
+        }
+        /*Limpia y pasa para abajo*/
+        .clearfix::after {
+             content: "";
+            clear: both;
+            display: table;
+        }
+
+        </style>
+    </head>
+   
+    <body>
+    
+         <div class="clearfix">
+            
+                <div class="horizontal fondo_amarillo">
+                    <h2>Lamborghini</h2>
+                </div>
+                <div class="horizontal fondo_rojo">
+                    <h2>Ferrari</h2>
+                </div>
+                <div class="horizontal fondo_morado">
+                    <h2>MClaren</h2>
+                </div>
+                <div class="horizontal fondo_azul anulado">
+                    <h2>Bugatti</h2>
+                </div>
+         </div> 
+         
+         <p>
+             lllll
+         </p>
+    </body>
+</html>
