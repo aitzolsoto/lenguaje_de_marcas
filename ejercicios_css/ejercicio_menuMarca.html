@@ -2,147 +2,172 @@
     <head>
         <meta charset="UTF-8">
         <style>
-        .menu{
+        ul{
             list-style-type: none;
+            background-color: #e60b0b;
             overflow: hidden;
-            background-color: rgb(224, 20, 37);
-        }
-
-        .contenido_izq{
-            float: left;
-        }
-        
-        .contenido_izq1{
-            float: left;
-            margin-right: -400px
-        }
-
-        .contenido_izq2{
-            float: left;
-            margin-right: -400px;
-        }
-        
-        .contenido_der{
-            float: right;
-        }
-
-        .ref {
-            display: inline-block;
-             color: white;
-            text-align: center;
-            padding: 14px 120px;
-             text-decoration: none;
-        }
-
-        .menu_articulo{
-            list-style-type: none;
-            color: black;
+            padding: 3px;
             
         }
 
-        .margen{
-            margin-top: 70px
+        li{
+            float: left;
+            
         }
 
-        .margen_pequeños{
-            margin-top: 150px
+        li a{
+            color: aliceblue;
+            text-align: center;
+            padding: 15px 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 70px;
         }
 
-        .margen_izquierda{
-            margin-right: 600px
+        .tamañotitulo{
+            width: 13%;
+        }
+
+        .menuoscuro{
+            background-color: #cc0000;
+           
         }
 
         li a:hover{
-            background-color: rgb(58, 58, 58)
+            background-color: #111;
         }
 
-        .activo{
-            background-color: antiquewhite;
-            color: black
+        .barrabusqueda{
+            background-color: aliceblue;
+            color: black;
+            margin-left: 200px;
+            width: 8%;
         }
 
-        .titulo{
-            width: 10%;
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
         }
 
-        .tamaño70{
-            width: 70%;
+        .foto_articulo1{
+            width: 80%;
         }
 
-        .tamaño20{
-            width: 20%
+        .articulo{
+            float: left;
+            margin-left: 300px;
+            
         }
 
-        .tamaño38{
-            width: 38%
+        .articulo_pequeño{
+            width: 100%;
         }
 
-        .tamaño42{
-            width: 42%
+
+        .margin_izq{
+            margin-left: 50px
         }
 
-        .tamaño19{
-            width: 19%
+        .flex-container {
+             display: flex;
+            flex-wrap: nowrap;
+            
         }
+
+        .flex-container .box1 {
+            width: 37%; 
+            text-align: left;
+            padding: 5px; 
+        }
+
+        .margen-pequeños{
+            margin-top: 50px;
+            
+        }
+
+        .atletismo{
+            color: rgb(255, 153, 0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .ciclismo{
+            color: rgb(0, 81, 255);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .futbol{
+            color: rgb(119, 0, 255);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .letra_articulos{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+
+       
+
         
-       .clearfix::after{
-           content: "";
-           clear: both;
-           display: table;
-       }
-
-       .color_naranja{
-           color: orange;
-       }
-
-       .texto_articulo{
-           font-size: 35px
-       }
+        
 
         </style>
     </head>
     <body>
         <div align="center">
-            <img src="img_marca/titulo.png" class="titulo">
+            <img src="img_marca/titulo.png" class="tamañotitulo">
         </div>
-       <!--Menu-->
-        <div class="clearfix">
-        <ul class="menu">
-            <li class="contenido_izq"><a href="Futbol" class="ref">Futbol</a></li>
-            <li class="fondo_naranja contenido_izq"><a href="Baloncesto" class="ref">Baloncesto</a></li>
-            <li class="fondo_rojo contenido_izq"><a href="Motor" class="ref">Motor</a></li>
-            <li class="fondo_gris contenido_izq"><a href="Polideportivo" class="ref">Polideportivo</a></li>
-            <li class="fondo_azul contenido_izq"><a href="Mas+" class="ref">Mas+</a></li>
+        
+        
+        <!--Menu-->
+        <ul>
+            <li><a href="Futbol">Futbol</a></li>
+            <li><a href="Baloncesto">Baloncesto</a></li>
+            <li><a href="Motor">Motor</a></li>
+            <li><a href="Polideportivo">Polideportivo</a></li>
+            <li class="menuoscuro"><a href="Videos">Videos</a></li>
+            <li class="menuoscuro"><a href="Ultima hora">Ultima hora</a></li>
+            <li class="menuoscuro"><a href="CuídatePlus">CuídatePlus</a></li>
+            <li><a href="Mas+">Mas+</a></li>
+            <li class="barrabusqueda"><p>Buscar en marca</p></li>
         </ul>
-        </div>
-        <!--Primeros articulos-->
-           <div>
-               <!--Articulo principal-->
-                    <h2 >Atletismo</h2>
-                    <img src="img_marca/kipchoge2.jpg" class="tamaño38"> 
-                    <!--Articulos secundarios-->
-                    <div class="contenido_der">
-                            <div>
-                                <img src="img_marca/marca1.jpg" class="tamaño20 contenido_izq">
-                                <h3>Futbol</h3>
-                                <p class="clearfix">Jugadores</p>
-                            </div>
-        
-                            <div>
-                                <img src="img_marca/ciclismo.jpg" class="tamaño20 contenido_izq">
-                                <h3>Ciclismo</h3>
-                                <p class="clearfix">Ciclistas</p>
-                            </div>
-        
-                            <div>
-                                <img src="img_marca/maraton.jpg" class="tamaño20 contenido_izq">
-                                <h3>Atletismo</h3>
-                                <p class="clearfix">Maraton</p>
-                            </div>
-                        </div>
-             
-               </div>
-          
 
+        <div class="clearfix">
+            <div align="center" class="articulo">
+                <img src="img_marca/kipchoge2.jpg" class="foto_articulo1">
+                <h1> Kipchoge, baja de las dos horas<br>en maratón con 1:59:40</h1>
+            </div>
+
+            <div class="flex-container margen-pequeños">
+                <div class="box1">
+                    <img src="img_marca/marca1.jpg" class="articulo_pequeño">
+                </div>
+                <div class="box1">
+                    <h3 class="futbol">Futbol</h3>
+                    <p class="letra_articulos">Ganadores y perdedores<br>de la afición en LaLiga</p>
+                </div>
+            </div>
+
+            <div class="flex-container margen-pequeños">
+                 <div class="box1">
+                     <img src="img_marca/ciclismo.jpg" class="articulo_pequeño">
+                </div>
+                 <div class="box1">
+                     <h3 class="ciclismo">Ciclismo</h3>
+                     <p class="letra_articulos">Oficial: la fundación Euskadi correra<br> en 2020 en la categoría UCI Pro Team</p>
+                </div>
+             </div> 
+             
+             <div class="flex-container margen-pequeños">
+                  <div class="box1">
+                      <img src="img_marca/maraton.jpg" class="articulo_pequeño">
+                    </div>
+                  <div class="box1">
+                      <h3 class="atletismo">Atletismo</h3>
+                      <p class="letra_articulos">Brigid Kosgei destroza el record<br>del mundo femenino de maratón</p>
+                </div>
+            </div>
+            </div>
+        </div>
     </body>
 </html>
