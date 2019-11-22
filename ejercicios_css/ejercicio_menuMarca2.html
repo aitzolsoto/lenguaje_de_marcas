@@ -1,0 +1,209 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+        ul{
+            list-style-type: none;
+            background-color: #e60b0b;
+            overflow: hidden;
+            padding: 3px;
+            
+        }
+        li{
+            float: left;
+            
+        }
+        li a{
+            color: aliceblue;
+            text-align: center;
+            padding: 15px 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 70px;
+        }
+        .tamañotitulo{
+            width: 13%;
+        }
+        .menuoscuro{
+            background-color: #cc0000;
+           
+        }
+        li a:hover{
+            background-color: #111;
+        }
+        .barrabusqueda{
+            background-color: aliceblue;
+            color: black;
+            margin-left: 200px;
+            width: 8%;
+        }
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .foto_articulo1{
+            width: 80%;
+        }
+        .articulo{
+            float: left;
+            margin-left: 300px;
+            
+        }
+
+        
+        .articulo_pequeño{
+            width: 100%;
+        }
+        .margin_izq{
+            margin-left: 100px
+        }
+
+        .margin_der{
+            margin-izq: -200px;
+        }
+        .flex-container {
+             display: flex;
+            flex-wrap: nowrap;
+            
+        }
+        .flex-container .box1 {
+            width: 37%; 
+            text-align: left;
+            padding: 5px; 
+        }
+        .flex-container .box2 {
+            width: 40%; 
+            margin-left: 150px;
+        }
+        .margen-pequeños{
+            margin-top: 50px;
+            
+        }
+        .atletismo{
+            color: rgb(255, 153, 0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .ciclismo{
+            color: rgb(0, 81, 255);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .futbol{
+            color: rgb(119, 0, 255);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .nba{
+            color: rgb(23, 197, 23);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .letra_articulos{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+       
+        .tamaño_articulo2{
+            width: 60%;
+        }
+
+        .tamaño_articulo_neymar{
+            width: 50%;;
+        }
+
+        
+        
+        </style>
+    </head>
+    <body>
+        <div align="center">
+            <img src="img_marca/titulo.png" class="tamañotitulo">
+        </div>
+        
+        
+        <!--Menu-->
+        <ul>
+            <li><a href="Futbol">Futbol</a></li>
+            <li><a href="Baloncesto">Baloncesto</a></li>
+            <li><a href="Motor">Motor</a></li>
+            <li><a href="Polideportivo">Polideportivo</a></li>
+            <li class="menuoscuro"><a href="Videos">Videos</a></li>
+            <li class="menuoscuro"><a href="Ultima hora">Ultima hora</a></li>
+            <li class="menuoscuro"><a href="CuídatePlus">CuídatePlus</a></li>
+            <li><a href="Mas+">Mas+</a></li>
+            <li class="barrabusqueda"><p>Buscar en marca</p></li>
+        </ul>
+
+        <!--Primeros articulos-->
+        <div class="clearfix">
+            <div align="center" class="articulo">
+                <img src="img_marca/kipchoge2.jpg" class="foto_articulo1">
+                <h1> Kipchoge, baja de las dos horas<br>en maratón con 1:59:40</h1>
+            </div>
+
+            <div class="flex-container margen-pequeños">
+                <div class="box1">
+                    <img src="img_marca/marca1.jpg" class="articulo_pequeño">
+                </div>
+                <div class="box1">
+                    <h3 class="futbol">Futbol</h3>
+                    <p class="letra_articulos">Ganadores y perdedores<br>de la afición en LaLiga</p>
+                </div>
+            </div>
+
+            <div class="flex-container margen-pequeños">
+                 <div class="box1">
+                     <img src="img_marca/ciclismo.jpg" class="articulo_pequeño">
+                </div>
+                 <div class="box1">
+                     <h3 class="ciclismo">Ciclismo</h3>
+                     <p class="letra_articulos">Oficial: la fundación Euskadi correra<br> en 2020 en la categoría UCI Pro Team</p>
+                </div>
+             </div> 
+             
+             <div class="flex-container margen-pequeños">
+                  <div class="box1">
+                      <img src="img_marca/maraton.jpg" class="articulo_pequeño">
+                    </div>
+                  <div class="box1">
+                      <h3 class="atletismo">Atletismo</h3>
+                      <p class="letra_articulos">Brigid Kosgei destroza el record<br>del mundo femenino de maratón</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!--Segundos articulos-->
+        <div>
+           <div class="flex-container">
+                <div class="box2">
+                    <h3 class="nba">NBA</h3>
+                    <img src="img_marca/nba.jpg" class="tamaño_articulo2">
+                    <p class="letra_articulos">Los numeros de Zion<br>aterrorizan a la NBA</p>
+                </div>
+
+                <div class="box2">
+                    <h3 class="futbol">Fútbol</h3>
+                    <img src="img_marca/neymar.jpg" class="tamaño_articulo_neymar">
+                    <p class="letra_articulos">El PSG confirma que neymar<br>estara cuatro semanas de baja</p>
+                </div>
+         </div>       
+        </div>
+
+          <!--Terceros articulos-->
+          <div>
+            <div class="flex-container">
+                 <div class="box2">
+                     <h3 class="ciclismo">Ciclismo</h3>
+                     <img src="img_marca/ciclismo2.jpg" class="tamaño_articulo2">
+                     <p class="letra_articulos">Kittel, Dumoulin, Irizar, Ten Dam...<br>ciclistas que cuelgan la bici en 2019</p>
+                 </div>
+ 
+                 <div class="box2">
+                     <h3 class="nba">NBA</h3>
+                     <img src="img_marca/curry2.jpg" class="tamaño_articulo_neymar">
+                     <p class="letra_articulos">Curry vuelve a hacer historia: primer jugador<br>en ganar 40 millones en una temporada</p>
+                 </div>
+          </div>       
+         </div>
+    </body>
+</html>
