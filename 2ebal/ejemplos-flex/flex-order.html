@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: #f1f1f1;
+}
+
+.flex-container > div {
+  background-color: DodgerBlue;
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+/*flex-grow*/
+.div1{
+    order: 1;
+    flex-grow: 10;
+}
+
+.div2{
+    order: 2;
+    flex-grow: 1;
+}
+
+.div3{
+    order: 3;
+    flex-grow: 1;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>Flexible Items</h1>
+
+<div class="flex-container">
+  <div style="order: 3">1</div><!--Orden-->
+  <div style="order: 1">2</div>
+  <div style="order: 4">3</div> 
+  <div style="order: 2">4</div>
+</div>
+
+<p>All direct children of a flexible container becomes flexible items.</p>
+
+<div class="flex-container">
+    <div class="div2">1</div> <!--Grow- tamaño-->
+    <div class="div3">2</div>
+    <div class="div1">3</div>
+  </div>
+
+
+  <div class="flex-container">
+    <div class="div_tamaño2">1</div> 
+    <div class="div_tamaño3">2</div>
+    <div class="div_tamaño1">3</div>
+  </div>
+</body>
+</html>

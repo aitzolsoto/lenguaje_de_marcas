@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <style>
+    .flex-container1 {
+    /*flex = Ordena de izquierda a derecha */
+    display: flex;
+    justify-content: center;
+    }
+
+
+    .flex-container_articulo_pequeño{
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .flex-container_articulo_texto{
+        display: flex;
+    }
+
+    .tamaño_titulo{
+        width: 60%;
+       
+    }
+
+    ul{
+            list-style-type: none;
+            background-color: #e60b0b;
+            overflow: hidden;
+            padding: 3px; 
+     }
+    li{
+            float: left;
+            
+     }
+     li a{
+            color: aliceblue;
+            text-align: center;
+            padding: 15px 10px;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           display: inline-block;
+           text-decoration: none;
+           margin-left: 70px;
+     }
+     li a:hover{
+            background-color: #111;
+    }
+    .barrabusqueda{
+            background-color: aliceblue;
+            color: black;
+            margin-left: 200px;
+            width: 8%;
+    }
+
+    .tamaño_foto{
+        width: 80%;
+    }
+
+    .tamaño_articulo_pequeño{
+        width: 30%;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="flex-container1">
+            <div>
+                <img src="img_marca/titulo.png" class="tamaño_titulo">
+            </div>
+        </div>
+
+        <div>
+            <!--Menu-->
+            <ul>
+                <li><a href="Futbol">Futbol</a></li>
+                <li><a href="Baloncesto">Baloncesto</a></li>
+                <li><a href="Motor">Motor</a></li>
+                <li><a href="Polideportivo">Polideportivo</a></li>
+                <li class="menuoscuro"><a href="Videos">Videos</a></li>
+                <li class="menuoscuro"><a href="Ultima hora">Ultima hora</a></li>
+                <li class="menuoscuro"><a href="CuídatePlus">CuídatePlus</a></li>
+                <li><a href="Mas+">Mas+</a></li>
+                <li class="barrabusqueda"><p>Buscar en marca</p></li>
+            </ul>
+        </div>
+
+        <div class="flex-container1">
+            <div>
+                <img src="img_marca/kipchoge2.jpg" class="tamaño_foto">
+                <h3>Kipchoge baja de las dos horas en maraton</h3>
+            </div>
+
+            <div class="flex-container_articulo_pequeño">
+                <div class="flex-container1">
+                    <div>
+                        <img src="img_marca/marca1.jpg" class="tamaño_articulo_pequeño">
+                    </div>
+                    
+                    <div>
+                        <h4>Futbol</h4>
+                        <p>Futbol</p>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img_marca/ciclismo.jpg" class="tamaño_articulo_pequeño">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
