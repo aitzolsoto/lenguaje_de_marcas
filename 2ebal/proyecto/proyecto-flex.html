@@ -1,23 +1,131 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <style>
-        .flex-container_titulo{
-            display: flex;
-            justify-content: center;
-            
-            
-        }
-
         
+            .flex-container_video{
+                display: flex;
+                justify-content: center;
+            }
 
+            .flex-container_titulo{
+                display: flex;
+                background-color: black;                
+            }
+
+            .flex-container_articulos{
+                display: flex;
+                justify-content: center;
+                margin-top: 100px;
+                margin-left: 200px;
+                
+                
+            }
+
+            .flex-container_articulos > div1 {
+                background-color: rgb(14, 235, 235);
+                padding: 30px;
+                
+            }
         
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: black; 
+                 
+            }
+
+            .tamaño_cross{
+                width: 70%;
+            }
+
+            .letra_cross{
+                font-family:   'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 40px;
+                margin-top: 130px;
+            }
+
+            li{
+                float: left;
+            }
+            li a{
+                color: white;
+                padding: 20px;
+                 margin-left: 277px;
+                display: inline-block;
+                text-decoration: none;
+            }
+
+            .letra_menu{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 20px;
+            }
+
+            .tamaño_titulo{
+                width: 70%;
+            }
+
+            li a:hover{
+                color: rgb(10, 241, 241);
+            }
+
+            video{
+              width: 100%
+            }
+
+            .tamaño_foto_menu{
+                width: 16%;
+                margin-left: 825px;
+                margin-top: 10px;
+            }
 
         
         </style>
     </head>
     <body>
-        <header>
-            
-        </header>
+        <div class="flex-container_video">
+           <div>
+                <video autoplay muted loop id="video">
+                    <source src="img_runners/video.mp4" type="video/mp4">
+                </video>
+           </div>
+        </div>
+
+        <div class="flex-container_titulo">
+            <div>
+                <img src="img_runners/runners.png" class="tamaño_foto_menu">
+            </div>
+        </div>
+       
+        <div>
+            <ul>
+                <li></li>
+                <li class="letra_menu"><a href="training">TRAINING</a></li>
+                <li class="letra_menu"><a href="salud">SALUD</a></li>
+                <li class="letra_menu"><a href="equipamiento">EQUIPAMIENTO</a></li>
+                <li class="letra_menu"><a href="nutrición">NUTRICION</a></li>
+            </ul>
+        </div> 
+        
+        <div class="flex-container_articulos">
+            <div1 >
+                <h1 class="letra_cross">
+                    ESPAÑA PINCHA EN EL<br>
+                     EUROPEO DE CROSS:<br>
+                      OUKHELFEN EN SUB-23 Y LOS<br> 
+                      ABSOLUTOS SUMAN DOS BRONCES
+                </h1>
+
+                <h3>El equipo de cross vuelve de Lisboa con dos bronces: Abdessamad Oukhelfen
+                     en sub-23 y el equipo masculino absoluto.</h3>
+            </div1>
+
+            <div>
+                <img src="img_runners/cross1.jpg" class="tamaño_cross">
+            </div>
+        </div>
+       
     </body>
 </html>
