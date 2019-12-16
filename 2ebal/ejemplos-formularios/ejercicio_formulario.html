@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .flex-container{
+                display:flex;
+                justify-content: center;
+                margin-top: 200px;
+            }
+
+            .flex-container > div{
+                background-color:gold;
+                padding: 20px;
+            }
+
+            body{
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+         <div class="flex-container">
+             <div>
+                <form action="echo_ejercicio.php" >
+                Nombre:
+                <input type="text" name="nombre" value="" placeholder="Nombre">
+                Apellido:
+                <input type="text" name ="apellido" value="" placeholder="Apellido"><br><br>
+                Sexo:
+                <!--Select-->
+                <select name="sexo">
+                <option value=""></option>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+                <option value="Otros">Otros</option>
+                </select>
+                <br><br>
+                <!--RadioButton-->
+                Nivel de estudios:<br>
+                <input type="radio" name="estudios" value="ESO">ESO<br>
+                <input type="radio" name="estudios" value="FP">FP<br>
+                <input type="radio" name="estudios" value="Universidad">Universidad<br>
+                <br>
+            
+                <!--Checkbox-->
+                <br>
+                Vehiculo:<br>
+                <input type="checkbox" name="coche" value="Coche"> Coche<br>
+                <input type="checkbox" name="moto" value="Moto"> Moto<br><br>
+            
+                <!--TextArea-->
+                Descripción:<br>
+                <textarea name="descripcion" rows="10" cols="30" placeholder="Descripción..."></textarea><br><br>
+                <!--Boton-->
+                <input type="submit" value="Enviar">
+                </form>
+            </div>
+           </div>
+    </body>
+</html>
