@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+        function start(){
+            document.getElementById('boton0').style.display='block';
+            document.getElementById('boton1').style.display='block';
+            document.getElementById('start').style.display='none';
+        }
+        
+        function mostrar(){
+            document.getElementById('texto1').style.display='block';
+            document.getElementById('texto2').style.display='block';
+            document.getElementById('texto3').style.display='block';
+            document.getElementById('boton0').style.display='block';
+            document.getElementById('boton1').style.display='block';
+            document.getElementById('foto').style.display='block';
+        }
+
+        function ocultar(){
+            document.getElementById('texto1').style.display='none';
+            document.getElementById('texto2').style.display='none';
+            document.getElementById('texto3').style.display='none';
+            document.getElementById('foto').style.display='none';
+        }
+        </script>
+
+    </head>
+    <body>
+
+        <button id="start" type="button" onclick="start()">Start</button><br>
+
+        <button id="boton0" type="button" onclick="mostrar()" style="display: none">Click</button><br>
+
+        <button id="boton1" type="button" onclick="ocultar()" style="display: none">Ocultar</button>
+
+        <p id="texto1" style="display: none">Texto1</p><br>
+        <p id="texto2" style="display: none">Texto2</p><br>
+        <p id="texto3" style="display: none">Texto3</p><br>
+        <img id="foto" src="img/kipchoge2.jpg" style="display: none">
+
+    </body>
+</html>
