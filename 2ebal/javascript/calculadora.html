@@ -6,11 +6,12 @@
         <h1>Calculadora</h1>
 
         <input type="text" id="txt_resultado"><br><br>
-        <p id="resultado2"></p>
+        
         <input type="text" id="numero1" ><br>
         <input type="text" id="numero2" ><br>
         <button onclick="suma()">+</button>
         <button onclick="resta()">-</button>
+        <button onclick="limpiar()">0</button>
         
 
         <script>
@@ -21,8 +22,8 @@
           numero1 = parseInt(numero1_texto)
           numero2 = parseInt(numero2_texto)
           resultado = numero1 + numero2
-         document.getElementById("txt_resultado").innerHTML = resultado;
-         document.getElementById("resultado2").innerHTML = resultado;
+         document.getElementById("txt_resultado").value = resultado;
+        
         }
         function resta(){
             var numero1 = 0, numero2 = 0, numero1_texto = "", numero2_texto = "", resultado = ""
@@ -31,7 +32,12 @@
           numero1 = parseInt(numero1_texto)
           numero2 = parseInt(numero2_texto)
           resultado = numero1 - numero2
-         document.getElementById("txt_resultado").innerHTML = resultado;
+         document.getElementById("txt_resultado").value = resultado;
+        }
+        function limpiar(){
+            document.getElementById("numero1").value = ""
+            document.getElementById("numero2").value = ""
+            document.getElementById("txt_resultado").value = ""
         }
 
         </script>
