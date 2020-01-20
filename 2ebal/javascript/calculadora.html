@@ -4,14 +4,15 @@
 </head>
     <body>
         <h1>Calculadora</h1>
-
-        <input type="text" id="txt_resultado"><br><br>
+        
+        <p id="txt_resultado">0</p>
+        
         
         <input type="text" id="numero1" ><br>
-        <input type="text" id="numero2" ><br>
+        <input type="text" id="numero2" ><br><br>
         <button onclick="suma()">+</button>
         <button onclick="resta()">-</button>
-        <button onclick="limpiar()">0</button>
+        <button onclick="limpiar()">Borrar</button>
         
 
         <script>
@@ -22,7 +23,7 @@
           numero1 = parseInt(numero1_texto)
           numero2 = parseInt(numero2_texto)
           resultado = numero1 + numero2
-         document.getElementById("txt_resultado").value = resultado;
+         document.getElementById("txt_resultado").innerHTML = resultado;
         
         }
         function resta(){
@@ -32,12 +33,12 @@
           numero1 = parseInt(numero1_texto)
           numero2 = parseInt(numero2_texto)
           resultado = numero1 - numero2
-         document.getElementById("txt_resultado").value = resultado;
+         document.getElementById("txt_resultado").innerHTML = resultado;
         }
         function limpiar(){
             document.getElementById("numero1").value = ""
             document.getElementById("numero2").value = ""
-            document.getElementById("txt_resultado").value = ""
+            document.getElementById("txt_resultado").innerHTML = "0"
         }
 
         </script>
