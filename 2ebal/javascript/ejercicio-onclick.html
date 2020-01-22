@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .cuadrado{
+            display: flex;
+            background-color: brown;
+            border-style: solid;
+            width: 5%;
+            height: 50px;
+        }
+        </style>
+    </head>
+<body>
+
+    <div >
+        <button onclick="cambiarFondo1()" class="cuadrado" id="cuadrado1"></button>
+    </div>
+
+    <script>
+    function cambiarFondo1(){
+        document.getElementById("cuadrado1").style.visibility = 'hidden';
+    }
+    
+    
+    /*function cambiarFondo(){
+         c1.style.backgroundColor = 'black'
+         
+    }
+
+    c1 = document.getElementById("cuadrado1")
+    c1.addEventListener("click", cambiarFondo)*/
+    </script>
+</body>
+</html>
