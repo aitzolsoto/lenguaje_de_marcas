@@ -65,8 +65,10 @@
         </div>
         <br>
 
-        <button id="cuadrado9" class="boton_reset" onclick="reset()">Reset</button> 
-   </div>
+        <div class="flex-container">
+            <button id="cuadrado9" class="boton_reset" onclick="reset()">Reset</button> 
+        </div>
+   
         
     <script>
         var turno_jug = false, cuadrado1 = "", cuadrado2 = "", cuadrado3 = "", cuadrado4 = "", cuadrado5 = "", cuadrado6 = "", cuadrado7 = "", cuadrado8 = "", cuadrado9 = "";
@@ -74,19 +76,27 @@
         function turnos1(){
             
             if(turno_jug == false){
-                turno_jug = true;
-                console.log(turno_jug)
-                document.getElementById("cuadrado1").style.backgroundColor = 'black'
-                cuadrado1 = "black";
-                console.log(cuadrado1)
-                comprobar_jug1();
+                if(cuadrado1 == "black" || cuadrado1 == "blue"){
+
+                }else{
+                    turno_jug = true;
+                    console.log(turno_jug)
+                    document.getElementById("cuadrado1").style.backgroundColor = 'black'
+                    cuadrado1 = "black";
+                    console.log(cuadrado1)
+                    comprobar_jug1();
+                }
             } else {
-                turno_jug = false;
-                console.log(turno_jug)
-                document.getElementById("cuadrado1").style.backgroundColor = 'blue'
-                cuadrado1 = "blue";
-                console.log(cuadrado1)
-                comprobar_jug2()
+                if(cuadrado1 == "black" || cuadrado1 == "blue"){
+
+                }else{
+                    turno_jug = false;
+                    console.log(turno_jug)
+                    document.getElementById("cuadrado1").style.backgroundColor = 'blue'
+                    cuadrado1 = "blue";
+                    console.log(cuadrado1)
+                    comprobar_jug2()
+                }
             }
         }
 
@@ -94,19 +104,27 @@
             function turnos2(){
             
                 if(turno_jug == false){
-                    turno_jug = true;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado2").style.backgroundColor = 'black'
-                    cuadrado2 = "black"
-                    console.log(cuadrado2)
-                    comprobar_jug1();
+                    if(cuadrado2 == "black" || cuadrado2 == "blue"){
+
+                    }else{
+                        turno_jug = true;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado2").style.backgroundColor = 'black'
+                        cuadrado2 = "black"
+                        console.log(cuadrado2)
+                        comprobar_jug1();
+                    }
                 } else {
-                    turno_jug = false;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado2").style.backgroundColor = 'blue'
-                    cuadrado2 = "blue"
-                    console.log(cuadrado2)
-                    comprobar_jug2()
+                    if(cuadrado2 == "black" || cuadrado2 == "blue"){
+
+                }else{
+                        turno_jug = false;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado2").style.backgroundColor = 'blue'
+                        cuadrado2 = "blue"
+                        console.log(cuadrado2)
+                        comprobar_jug2()
+                    }
                 }
             }
 
@@ -114,76 +132,108 @@
             function turnos3(){
             
                 if(turno_jug == false){
-                    turno_jug = true;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado3").style.backgroundColor = 'black'
-                    cuadrado3 = "black";
-                    console.log(cuadrado3)
-                    comprobar_jug1();
+                    if(cuadrado3 == "black" || cuadrado3 == "blue"){
+
+                    }else{
+                        turno_jug = true;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado3").style.backgroundColor = 'black'
+                        cuadrado3 = "black";
+                        console.log(cuadrado3)
+                        comprobar_jug1();
+                    }
                 } else {
-                    turno_jug = false;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado3").style.backgroundColor = 'blue'
-                    cuadrado3 = "blue"
-                    console.log(cuadrado3)
-                    comprobar_jug2()
+                    if(cuadrado3 == "black" || cuadrado3 == "blue"){
+
+                    }else{
+                        turno_jug = false;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado3").style.backgroundColor = 'blue'
+                        cuadrado3 = "blue"
+                        console.log(cuadrado3)
+                        comprobar_jug2()
+                    }
                 }
             }    
              /*Boton4*/
              function turnos4(){
             
                 if(turno_jug == false){
-                    turno_jug = true;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado4").style.backgroundColor = 'black'
-                    cuadrado4 = "black";
-                    console.log(cuadrado4)
-                    comprobar_jug1();
+                    if(cuadrado4 == "black" || cuadrado4 == "blue"){
+
+                    }else{
+                        turno_jug = true;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado4").style.backgroundColor = 'black'
+                        cuadrado4 = "black";
+                        console.log(cuadrado4)
+                        comprobar_jug1();
+                    }
                 } else {
-                    turno_jug = false;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado4").style.backgroundColor = 'blue'
-                    cuadrado4 = "blue"
-                    console.log(cuadrado4)
-                    comprobar_jug2()
+                    if(cuadrado4 == "black" || cuadrado4 == "blue"){
+
+                    }else{
+                        turno_jug = false;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado4").style.backgroundColor = 'blue'
+                        cuadrado4 = "blue"
+                        console.log(cuadrado4)
+                        comprobar_jug2()
+                    }
                 }
              }    
             /*Boton5*/
             function turnos5(){
             
                 if(turno_jug == false){
-                    turno_jug = true;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado5").style.backgroundColor = 'black'
-                    cuadrado5 = "black";
-                    console.log(cuadrado5)
-                    comprobar_jug1();
+                    if(cuadrado5 == "black" || cuadrado5 == "blue"){
+
+                    }else{
+                        turno_jug = true;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado5").style.backgroundColor = 'black'
+                        cuadrado5 = "black";
+                        console.log(cuadrado5)
+                        comprobar_jug1();
+                    }
                 } else {
-                    turno_jug = false;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado5").style.backgroundColor = 'blue'
-                    cuadrado5 = "blue"
-                    console.log(cuadrado5)
-                    comprobar_jug2()
+                    if(cuadrado5 == "black" || cuadrado5 == "blue"){
+
+                    }else{
+                        turno_jug = false;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado5").style.backgroundColor = 'blue'
+                        cuadrado5 = "blue"
+                        console.log(cuadrado5)
+                        comprobar_jug2()
+                    }
                 }
             }    
             /*Boton6*/
             function turnos6(){
                 
                 if(turno_jug == false){
-                    turno_jug = true;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado6").style.backgroundColor = 'black'
-                    cuadrado6 = "black";
-                    console.log(cuadrado6)
-                    comprobar_jug1();
+                    if(cuadrado6 == "black" || cuadrado6 == "blue"){
+
+                    }else{
+                        turno_jug = true;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado6").style.backgroundColor = 'black'
+                        cuadrado6 = "black";
+                        console.log(cuadrado6)
+                        comprobar_jug1();
+                    }
                 } else {
-                    turno_jug = false;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado6").style.backgroundColor = 'blue'
-                    cuadrado6 = "blue"
-                    console.log(cuadrado6)
-                    comprobar_jug2()
+                    if(cuadrado6 == "black" || cuadrado6 == "blue"){
+
+                }else{
+                        turno_jug = false;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado6").style.backgroundColor = 'blue'
+                        cuadrado6 = "blue"
+                        console.log(cuadrado6)
+                        comprobar_jug2()
+                    }
                 }
              }
 
@@ -191,19 +241,27 @@
             function turnos7(){
                 
                 if(turno_jug == false){
-                    turno_jug = true;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado7").style.backgroundColor = 'black'
-                    cuadrado7 = "black";
-                    console.log(cuadrado7)
-                    comprobar_jug1();
+                    if(cuadrado7 == "black" || cuadrado7 == "blue"){
+
+                    }else{
+                        turno_jug = true;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado7").style.backgroundColor = 'black'
+                        cuadrado7 = "black";
+                        console.log(cuadrado7)
+                        comprobar_jug1();
+                    }
                 } else {
-                    turno_jug = false;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado7").style.backgroundColor = 'blue'
-                    cuadrado7 = "blue"
-                    console.log(cuadrado7)
-                    comprobar_jug2()
+                    if(cuadrado7 == "black" || cuadrado7 == "blue"){
+
+                }else{
+                        turno_jug = false;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado7").style.backgroundColor = 'blue'
+                        cuadrado7 = "blue"
+                        console.log(cuadrado7)
+                        comprobar_jug2()
+                    }
                 }
              }
 
@@ -211,19 +269,27 @@
             function turnos8(){
                 
                 if(turno_jug == false){
-                    turno_jug = true;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado8").style.backgroundColor = 'black'
-                    cuadrado8 = "black";
-                    console.log(cuadrado8)
-                    comprobar_jug1();
+                    if(cuadrado8 == "black" || cuadrado8 == "blue"){
+
+                    }else{
+                        turno_jug = true;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado8").style.backgroundColor = 'black'
+                        cuadrado8 = "black";
+                        console.log(cuadrado8)
+                        comprobar_jug1();
+                    }
                 } else {
-                    turno_jug = false;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado8").style.backgroundColor = 'blue'
-                    cuadrado8 = "blue"
-                    console.log(cuadrado8)
-                    comprobar_jug2()
+                    if(cuadrado8 == "black" || cuadrado8 == "blue"){
+
+                    }else{
+                        turno_jug = false;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado8").style.backgroundColor = 'blue'
+                        cuadrado8 = "blue"
+                        console.log(cuadrado8)
+                        comprobar_jug2()
+                    }
                 }
              }
 
@@ -231,19 +297,27 @@
             function turnos9(){
                 
                 if(turno_jug == false){
-                    turno_jug = true;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado9").style.backgroundColor = 'black'
-                    cuadrado9 = "black";
-                    console.log(cuadrado9)
-                    comprobar_jug1();
+                    if(cuadrado9 == "black" || cuadrado9 == "blue"){
+
+                    }else{
+                        turno_jug = true;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado9").style.backgroundColor = 'black'
+                        cuadrado9 = "black";
+                        console.log(cuadrado9)
+                        comprobar_jug1();
+                    }
                 } else {
-                    turno_jug = false;
-                    console.log(turno_jug)
-                    document.getElementById("cuadrado9").style.backgroundColor = 'blue'
-                    cuadrado9 = "blue"
-                    console.log(cuadrado9)
-                    comprobar_jug2()
+                    if(cuadrado9 == "black" || cuadrado9 == "blue"){
+
+                }else{
+                        turno_jug = false;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado9").style.backgroundColor = 'blue'
+                        cuadrado9 = "blue"
+                        console.log(cuadrado9)
+                        comprobar_jug2()
+                 }
                 }
              }
 
@@ -253,7 +327,8 @@
                   cuadrado7 == "black" & cuadrado8 == "black" & cuadrado9 == "black" || cuadrado1 == "black" & cuadrado5 == "black" & cuadrado9 == "black" || 
                   cuadrado3 == "black" & cuadrado5 == "black" & cuadrado7 == "black" || cuadrado1 == "black" & cuadrado4 == "black" & cuadrado7 == "black" ||
                    cuadrado2 == "black" & cuadrado5 == "black" & cuadrado8 == "black" || cuadrado3 == "black" & cuadrado6 == "black" & cuadrado9 == "black"){
-                    alert("Jugador 1 gana")
+                    alert("Jugador 1 gana");
+                    reset();
                  }
              }
 
@@ -262,13 +337,22 @@
                   cuadrado7 == "blue" & cuadrado8 == "blue" & cuadrado9 == "blue" || cuadrado1 == "blue" & cuadrado5 == "blue" & cuadrado9 == "blue" || 
                   cuadrado3 == "blue" & cuadrado5 == "blue" & cuadrado7 == "blue" || cuadrado1 == "blue" & cuadrado4 == "blue" & cuadrado7 == "blue" ||
                    cuadrado2 == "blue" & cuadrado5 == "blue" & cuadrado8 == "blue" || cuadrado3 == "blue" & cuadrado6 == "blue" & cuadrado9 == "blue"){
-                    alert("Jugador 2 gana")
+                    alert("Jugador 2 gana");
+                    reset();
                  }
              }
 
              function reset(){
-                var turno_jug = false, cuadrado1 = "", cuadrado2 = "", cuadrado3 = "", cuadrado4 = "", cuadrado5 = "", cuadrado6 = "", cuadrado7 = "", cuadrado8 = "", cuadrado9 = "";
+                 turno_jug = false, cuadrado1 = "", cuadrado2 = "", cuadrado3 = "", cuadrado4 = "", cuadrado5 = "", cuadrado6 = "", cuadrado7 = "", cuadrado8 = "", cuadrado9 = "";
                 document.getElementById("cuadrado1").style.backgroundColor = 'white'
+                document.getElementById("cuadrado2").style.backgroundColor = 'white'
+                document.getElementById("cuadrado3").style.backgroundColor = 'white'
+                document.getElementById("cuadrado4").style.backgroundColor = 'white'
+                document.getElementById("cuadrado5").style.backgroundColor = 'white'
+                document.getElementById("cuadrado6").style.backgroundColor = 'white'
+                document.getElementById("cuadrado7").style.backgroundColor = 'white'
+                document.getElementById("cuadrado8").style.backgroundColor = 'white'
+                document.getElementById("cuadrado9").style.backgroundColor = 'white'
              }
         
     </script>

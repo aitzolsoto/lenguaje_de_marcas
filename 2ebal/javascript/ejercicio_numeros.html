@@ -1,0 +1,38 @@
+<html>
+    <body>
+
+        <input type="text" placeholder="numero 1" id="numero1">
+        <input type="text" placeholder="numero 2" id="numero2">
+        <input type="text" placeholder="numero 3" id="numero3">
+
+        <input type="button" onclick="calculo()" value="Calcular">
+
+        <p id="resultado"></p>
+        <script>
+                var x = 0, y = 0, z = 0, x_texto = 0, y_texto = 0, z_texto = 0;
+            function calculo(){
+            x_texto = document.getElementById("numero1").value
+            y_texto = document.getElementById("numero2").value
+            z_texto = document.getElementById("numero3").value
+
+            x = parseInt(x_texto)
+            y = parseInt(y_texto)
+            z = parseInt(z_texto)
+
+                if(x >= y && y >=z){
+                    document.getElementById("resultado").innerHTML = x + "> " + y + "> " + z 
+                } else if(x >= z && z >=y){
+                    document.getElementById("resultado").innerHTML = x + "> " + z + "> " + y
+                } else if(y >= x && x >=z){
+                    document.getElementById("resultado").innerHTML = y + "> " + x + "> " + z
+                } else if(y >= z && z >=x){
+                    document.getElementById("resultado").innerHTML = y + "> " + z + "> " + x
+                } else if(z >= x && x >=y){
+                    document.getElementById("resultado").innerHTML = z + "> " + x + "> " + y
+                } else if(z >= y && y >=x){
+                    document.getElementById("resultado").innerHTML = z + "> " + y + "> " + x
+                }
+            }
+        </script>
+    </body>
+</html>
