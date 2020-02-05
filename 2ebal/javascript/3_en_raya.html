@@ -22,13 +22,28 @@
         .boton_reset{
             margin-left: 10px;
         }
+
+        .flex-container_texto{
+            margin-top: 50px;
+            justify-content: left;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+        }
+
+        .margen_arriba{
+            margin-top: 50px;
+        }
+
+        
         </style>
     </head>
     <body>
-        <!--Fila 1-->
         
-        <div class="flex-container">
-             <!--Boton1-->
+        <!--Fila 1-->
+        <div class="flex-container margen_arriba">
+            
+            <!--Boton1-->
                 <button id="cuadrado1" class="boton"  onclick="turnos1()"></button> 
             
              <!--Boton2-->
@@ -54,19 +69,23 @@
        <!--Fila 3-->
        <div class="flex-container">
              <!--Boton4-->
-            <button id="cuadrado7" class="boton" onclick="turnos7()" ></button> 
+                <button id="cuadrado7" class="boton" onclick="turnos7()" ></button> 
             
             <!--Boton5-->
                <button id="cuadrado8" class="boton" onclick="turnos8()" ></button>
             <!--Boton6-->
-               <button id="cuadrado9" class="boton" onclick="turnos9()"></button> 
-               
-                
+               <button id="cuadrado9" class="boton" onclick="turnos9()"></button>        
         </div>
         <br>
 
         <div class="flex-container">
             <button id="cuadrado9" class="boton_reset" onclick="reset()">Reset</button> 
+        </div>
+
+
+        <div class="flex-container_texto">
+            <p>Jugador 1</p>
+            <p>Jugador 2</p>
         </div>
    
         
@@ -117,7 +136,7 @@
                 } else {
                     if(cuadrado2 == "black" || cuadrado2 == "blue"){
 
-                }else{
+                     }else{
                         turno_jug = false;
                         console.log(turno_jug)
                         document.getElementById("cuadrado2").style.backgroundColor = 'blue'
@@ -226,7 +245,7 @@
                 } else {
                     if(cuadrado6 == "black" || cuadrado6 == "blue"){
 
-                }else{
+                     }else{
                         turno_jug = false;
                         console.log(turno_jug)
                         document.getElementById("cuadrado6").style.backgroundColor = 'blue'
@@ -254,7 +273,7 @@
                 } else {
                     if(cuadrado7 == "black" || cuadrado7 == "blue"){
 
-                }else{
+                     }else{
                         turno_jug = false;
                         console.log(turno_jug)
                         document.getElementById("cuadrado7").style.backgroundColor = 'blue'
@@ -310,14 +329,14 @@
                 } else {
                     if(cuadrado9 == "black" || cuadrado9 == "blue"){
 
-                }else{
-                        turno_jug = false;
-                        console.log(turno_jug)
-                        document.getElementById("cuadrado9").style.backgroundColor = 'blue'
-                        cuadrado9 = "blue"
-                        console.log(cuadrado9)
-                        comprobar_jug2()
-                 }
+                    }else{
+                            turno_jug = false;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado9").style.backgroundColor = 'blue'
+                            cuadrado9 = "blue"
+                            console.log(cuadrado9)
+                            comprobar_jug2()
+                    }
                 }
              }
 

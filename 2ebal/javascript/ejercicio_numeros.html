@@ -19,18 +19,19 @@
             y = parseInt(y_texto)
             z = parseInt(z_texto)
 
-                if(x >= y && y >=z){
-                    document.getElementById("resultado").innerHTML = x + "> " + y + "> " + z 
+             if(x >= y && y >=z){
+                    document.getElementById("resultado").innerHTML = x + " > " + y + " > " + z 
+                    
                 } else if(x >= z && z >=y){
-                    document.getElementById("resultado").innerHTML = x + "> " + z + "> " + y
+                    document.getElementById("resultado").innerHTML = x + " > " + z + " > " + y
                 } else if(y >= x && x >=z){
-                    document.getElementById("resultado").innerHTML = y + "> " + x + "> " + z
+                    document.getElementById("resultado").innerHTML = y + " > " + x + " > " + z
                 } else if(y >= z && z >=x){
-                    document.getElementById("resultado").innerHTML = y + "> " + z + "> " + x
+                    document.getElementById("resultado").innerHTML = y + " > " + z + " > " + x
                 } else if(z >= x && x >=y){
-                    document.getElementById("resultado").innerHTML = z + "> " + x + "> " + y
+                    document.getElementById("resultado").innerHTML = z + " > " + x + " > " + y
                 } else if(z >= y && y >=x){
-                    document.getElementById("resultado").innerHTML = z + "> " + y + "> " + x
+                    document.getElementById("resultado").innerHTML = z + " > " + y + " > " + x
                 }
             }
         </script>

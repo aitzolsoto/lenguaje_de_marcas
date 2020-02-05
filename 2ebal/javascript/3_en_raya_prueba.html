@@ -1,0 +1,385 @@
+<html>
+    <head>
+        <style>
+        .flex-container{
+            margin-left: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 100px;
+            height: 60px;
+            
+            
+        }
+
+        .flex-container > div{
+            display: flex;
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+
+        .boton{
+            width: 5%;
+            height: 50px;
+            margin-left: 5px;
+        }
+
+        .boton_reset{
+            margin-left: 10px;
+        }
+        
+        .parrafo1{
+            margin-left: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: black;
+        }
+
+        .parrafo2{
+            margin-left: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: blue;;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <!--Fila 1-->
+        <div class="flex-container">
+                <div>
+                   <!--Boton1-->
+                    <button id="cuadrado1" class="boton"  onclick="turnos1()"></button> 
+                    <!--Boton2-->
+                       <button id="cuadrado2" class="boton"  onclick="turnos2()"></button>
+                    <!--Boton3-->
+                       <button id="cuadrado3" class="boton" onclick="turnos3()"></button>
+                       
+                       <p id="jugador1" class="parrafo1">Jugador 1: 0</p>
+                </div>
+
+                <div>
+                    <!--Boton4-->
+                    <button id="cuadrado4" class="boton"  onclick="turnos4()"></button> 
+                    <!--Boton5-->
+                       <button id="cuadrado5" class="boton"  onclick="turnos5()"></button>
+                    <!--Boton6-->
+                       <button id="cuadrado6" class="boton" onclick="turnos6()"></button>
+                       
+                       <p id="jugador2" class="parrafo2">Jugador 2: 0</p>
+                </div>
+
+                <div>
+                    <!--Boton 7--> 
+                    <button id="cuadrado7" class="boton"  onclick="turnos7()"></button> 
+                    <!--Boton8-->
+                       <button id="cuadrado8" class="boton"  onclick="turnos8()"></button>
+                    <!--Boton9-->
+                       <button id="cuadrado9" class="boton" onclick="turnos9()"></button>
+                </div>
+
+                <div>
+                    <button id="cuadrado9" class="boton_reset" onclick="reset()">Reset</button> 
+                </div> 
+        </div> 
+   
+        
+        <script>
+            var turno_jug = false, cuadrado1 = "", cuadrado2 = "", cuadrado3 = "", cuadrado4 = "", cuadrado5 = "", cuadrado6 = "", cuadrado7 = "", cuadrado8 = "", cuadrado9 = "", jugador1 = 0, jugador2= 0;
+        /*Boton1*/
+            function turnos1(){
+                
+                if(turno_jug == false){
+                    if(cuadrado1 == "black" || cuadrado1 == "blue"){
+
+                    }else{
+                        turno_jug = true;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado1").style.backgroundColor = 'black'
+                        cuadrado1 = "black";
+                        console.log(cuadrado1)
+                        comprobar_jug1();
+                    }
+                } else {
+                    if(cuadrado1 == "black" || cuadrado1 == "blue"){
+
+                    }else{
+                        turno_jug = false;
+                        console.log(turno_jug)
+                        document.getElementById("cuadrado1").style.backgroundColor = 'blue'
+                        cuadrado1 = "blue";
+                        console.log(cuadrado1)
+                        comprobar_jug2()
+                    }
+                }
+            }
+
+            /*Boton2*/
+                function turnos2(){
+                
+                    if(turno_jug == false){
+                        if(cuadrado2 == "black" || cuadrado2 == "blue"){
+
+                        }else{
+                            turno_jug = true;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado2").style.backgroundColor = 'black'
+                            cuadrado2 = "black"
+                            console.log(cuadrado2)
+                            comprobar_jug1();
+                        }
+                    } else {
+                        if(cuadrado2 == "black" || cuadrado2 == "blue"){
+
+                        }else{
+                            turno_jug = false;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado2").style.backgroundColor = 'blue'
+                            cuadrado2 = "blue"
+                            console.log(cuadrado2)
+                            comprobar_jug2()
+                        }
+                    }
+                }
+
+                /*Boton3*/
+                function turnos3(){
+                
+                    if(turno_jug == false){
+                        if(cuadrado3 == "black" || cuadrado3 == "blue"){
+
+                        }else{
+                            turno_jug = true;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado3").style.backgroundColor = 'black'
+                            cuadrado3 = "black";
+                            console.log(cuadrado3)
+                            comprobar_jug1();
+                        }
+                    } else {
+                        if(cuadrado3 == "black" || cuadrado3 == "blue"){
+
+                        }else{
+                            turno_jug = false;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado3").style.backgroundColor = 'blue'
+                            cuadrado3 = "blue"
+                            console.log(cuadrado3)
+                            comprobar_jug2()
+                        }
+                    }
+                }    
+                /*Boton4*/
+                function turnos4(){
+                
+                    if(turno_jug == false){
+                        if(cuadrado4 == "black" || cuadrado4 == "blue"){
+
+                        }else{
+                            turno_jug = true;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado4").style.backgroundColor = 'black'
+                            cuadrado4 = "black";
+                            console.log(cuadrado4)
+                            comprobar_jug1();
+                        }
+                    } else {
+                        if(cuadrado4 == "black" || cuadrado4 == "blue"){
+
+                        }else{
+                            turno_jug = false;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado4").style.backgroundColor = 'blue'
+                            cuadrado4 = "blue"
+                            console.log(cuadrado4)
+                            comprobar_jug2()
+                        }
+                    }
+                }    
+                /*Boton5*/
+                function turnos5(){
+                
+                    if(turno_jug == false){
+                        if(cuadrado5 == "black" || cuadrado5 == "blue"){
+
+                        }else{
+                            turno_jug = true;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado5").style.backgroundColor = 'black'
+                            cuadrado5 = "black";
+                            console.log(cuadrado5)
+                            comprobar_jug1();
+                        }
+                    } else {
+                        if(cuadrado5 == "black" || cuadrado5 == "blue"){
+
+                        }else{
+                            turno_jug = false;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado5").style.backgroundColor = 'blue'
+                            cuadrado5 = "blue"
+                            console.log(cuadrado5)
+                            comprobar_jug2()
+                        }
+                    }
+                }    
+                /*Boton6*/
+                function turnos6(){
+                    
+                    if(turno_jug == false){
+                        if(cuadrado6 == "black" || cuadrado6 == "blue"){
+
+                        }else{
+                            turno_jug = true;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado6").style.backgroundColor = 'black'
+                            cuadrado6 = "black";
+                            console.log(cuadrado6)
+                            comprobar_jug1();
+                        }
+                    } else {
+                        if(cuadrado6 == "black" || cuadrado6 == "blue"){
+
+                        }else{
+                            turno_jug = false;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado6").style.backgroundColor = 'blue'
+                            cuadrado6 = "blue"
+                            console.log(cuadrado6)
+                            comprobar_jug2()
+                        }
+                    }
+                }
+
+                /*Boton7*/
+                function turnos7(){
+                    
+                    if(turno_jug == false){
+                        if(cuadrado7 == "black" || cuadrado7 == "blue"){
+
+                        }else{
+                            turno_jug = true;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado7").style.backgroundColor = 'black'
+                            cuadrado7 = "black";
+                            console.log(cuadrado7)
+                            comprobar_jug1();
+                        }
+                    } else {
+                        if(cuadrado7 == "black" || cuadrado7 == "blue"){
+
+                        }else{
+                            turno_jug = false;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado7").style.backgroundColor = 'blue'
+                            cuadrado7 = "blue"
+                            console.log(cuadrado7)
+                            comprobar_jug2()
+                        }
+                    }
+                }
+
+                    /*Boton8*/
+                function turnos8(){
+                    
+                    if(turno_jug == false){
+                        if(cuadrado8 == "black" || cuadrado8 == "blue"){
+
+                        }else{
+                            turno_jug = true;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado8").style.backgroundColor = 'black'
+                            cuadrado8 = "black";
+                            console.log(cuadrado8)
+                            comprobar_jug1();
+                        }
+                    } else {
+                        if(cuadrado8 == "black" || cuadrado8 == "blue"){
+
+                        }else{
+                            turno_jug = false;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado8").style.backgroundColor = 'blue'
+                            cuadrado8 = "blue"
+                            console.log(cuadrado8)
+                            comprobar_jug2()
+                        }
+                    }
+                }
+
+                    /*Boton9*/
+                function turnos9(){
+                    
+                    if(turno_jug == false){
+                        if(cuadrado9 == "black" || cuadrado9 == "blue"){
+
+                        }else{
+                            turno_jug = true;
+                            console.log(turno_jug)
+                            document.getElementById("cuadrado9").style.backgroundColor = 'black'
+                            cuadrado9 = "black";
+                            console.log(cuadrado9)
+                            comprobar_jug1();
+                        }
+                    } else {
+                        if(cuadrado9 == "black" || cuadrado9 == "blue"){
+
+                        }else{
+                                turno_jug = false;
+                                console.log(turno_jug)
+                                document.getElementById("cuadrado9").style.backgroundColor = 'blue'
+                                cuadrado9 = "blue"
+                                console.log(cuadrado9)
+                                comprobar_jug2()
+                        }
+                    }
+                }
+
+
+                function comprobar_jug1(){
+                    if(cuadrado1 == "black" & cuadrado2 == "black" & cuadrado3 == "black" || cuadrado4 == "black" & cuadrado5 == "black" & cuadrado6 == "black" ||
+                    cuadrado7 == "black" & cuadrado8 == "black" & cuadrado9 == "black" || cuadrado1 == "black" & cuadrado5 == "black" & cuadrado9 == "black" || 
+                    cuadrado3 == "black" & cuadrado5 == "black" & cuadrado7 == "black" || cuadrado1 == "black" & cuadrado4 == "black" & cuadrado7 == "black" ||
+                    cuadrado2 == "black" & cuadrado5 == "black" & cuadrado8 == "black" || cuadrado3 == "black" & cuadrado6 == "black" & cuadrado9 == "black"){
+                        alert("Jugador 1 gana");
+                        puntuacion1();
+                        reset();
+                    }
+                }
+
+                function comprobar_jug2(){
+                    if(cuadrado1 == "blue" & cuadrado2 == "blue" & cuadrado3 == "blue" || cuadrado4 == "blue" & cuadrado5 == "blue" & cuadrado6 == "blue" ||
+                    cuadrado7 == "blue" & cuadrado8 == "blue" & cuadrado9 == "blue" || cuadrado1 == "blue" & cuadrado5 == "blue" & cuadrado9 == "blue" || 
+                    cuadrado3 == "blue" & cuadrado5 == "blue" & cuadrado7 == "blue" || cuadrado1 == "blue" & cuadrado4 == "blue" & cuadrado7 == "blue" ||
+                    cuadrado2 == "blue" & cuadrado5 == "blue" & cuadrado8 == "blue" || cuadrado3 == "blue" & cuadrado6 == "blue" & cuadrado9 == "blue"){
+                        alert("Jugador 2 gana");
+                        puntuacion2();
+                        reset();
+                    }
+                }
+
+                function reset(){
+                    turno_jug = false, cuadrado1 = "", cuadrado2 = "", cuadrado3 = "", cuadrado4 = "", cuadrado5 = "", cuadrado6 = "", cuadrado7 = "", cuadrado8 = "", cuadrado9 = "";
+                    document.getElementById("cuadrado1").style.backgroundColor = 'white'
+                    document.getElementById("cuadrado2").style.backgroundColor = 'white'
+                    document.getElementById("cuadrado3").style.backgroundColor = 'white'
+                    document.getElementById("cuadrado4").style.backgroundColor = 'white'
+                    document.getElementById("cuadrado5").style.backgroundColor = 'white'
+                    document.getElementById("cuadrado6").style.backgroundColor = 'white'
+                    document.getElementById("cuadrado7").style.backgroundColor = 'white'
+                    document.getElementById("cuadrado8").style.backgroundColor = 'white'
+                    document.getElementById("cuadrado9").style.backgroundColor = 'white'
+                }
+
+                function puntuacion1(){
+                    jugador1 = jugador1 + 1
+                    document.getElementById("jugador1").innerHTML = "Jugador 1: " + jugador1
+                }
+
+                function puntuacion2(){
+                    jugador2 = jugador2 + 1
+                    document.getElementById("jugador2").innerHTML = "Jugador 2: " + jugador2
+                }
+            
+        </script>
+
+    </body>
+</html>
