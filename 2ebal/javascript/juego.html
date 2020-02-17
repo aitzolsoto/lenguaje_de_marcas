@@ -1,0 +1,58 @@
+<html>
+<head>
+
+    <style>
+    
+    </style>
+</head>
+    <body>
+        
+
+        
+
+        <script>
+            var tablero1 = [0,0,0,0]
+            
+
+            function barajar(){
+               
+               x = Math.floor(Math.random() * 4)
+               y = Math.floor(Math.random() * 4)
+               z =  Math.floor(Math.random() * 4)
+               j = Math.floor(Math.random() * 4)
+
+                 if(y == x){
+                    do{
+                        y = Math.floor(Math.random() * 4)
+                    }while(x == y)
+                 }
+
+                 if(z == x || z == y){
+                     do{
+                        z = Math.floor(Math.random() * 4)
+                     }while(z == x || z == y)
+                 }
+
+                 if(j == x || j == y || j == z){
+                     do{
+                        j = Math.floor(Math.random() * 4)
+                     }while(j == x || j == y || j == z)
+                 }
+                    
+
+               tablero1[0] = x
+                tablero1[1] = y
+                tablero1[2] = z
+                tablero1[3] = j
+
+                console.log("[ " + tablero1[0] + "," + tablero1[1] + "," + tablero1[2] + "," + tablero1[3] + "]")
+            
+              }
+              
+             
+
+              
+
+        </script> 
+    </body>
+</html>
