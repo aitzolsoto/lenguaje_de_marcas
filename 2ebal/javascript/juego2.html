@@ -14,16 +14,21 @@
         .flex-container > div{
             margin-top: 10px
         }
+
+        .boton{
+            width: 100px;
+            height: 50px;
+        }
     </style>
 </head>
     <body>
         
         <div class="flex-container">
            <div>
-                <button id="x" onclick="click1()"></button>
-                <button id="y" onclick="click2()"></button>
-                <button id="z" onclick="click3()"></button>
-                <button id="j" onclick="click4()"></button>
+                <button  class="boton" id="x" onclick="click1()"></button>
+                <button class="boton" id="y" onclick="click2()"></button>
+                <button class="boton" id="z" onclick="click3()"></button>
+                <button class="boton" id="j" onclick="click4()"></button>
             </div>
 
            
@@ -43,88 +48,88 @@
                              
             
 
-            function barajar(){
-               
-               /*Primera linea*/
-               x = Math.floor(Math.random() * 4)
-               y = Math.floor(Math.random() * 4)
-               z =  Math.floor(Math.random() * 4)
-               j = Math.floor(Math.random() * 4)
+                function barajar(){
+                
+                    /*Primera linea*/
+                    x = Math.floor(Math.random() * 4)
+                    y = Math.floor(Math.random() * 4)
+                    z =  Math.floor(Math.random() * 4)
+                    j = Math.floor(Math.random() * 4)
 
-                 if(y == x){
-                    do{
-                        y = Math.floor(Math.random() * 4)
-                    }while(x == y)
-                 }
-
-                 if(z == x || z == y){
-                     do{
-                        z = Math.floor(Math.random() * 4)
-                     }while(z == x || z == y)
-                 }
-
-                 if(j == x || j == y || j == z){
-                     do{
-                        j = Math.floor(Math.random() * 4)
-                     }while(j == x || j == y || j == z)
-                 }
-                    
-
-                tablero1[0] = x
-                tablero1[1] = y
-                tablero1[2] = z
-                tablero1[3] = j
-
-                console.log("[ " + tablero1[0] + "," + tablero1[1] + "," + tablero1[2] + "," + tablero1[3] + "]")
-
-              }
-
-            function empezarjuego(){
-                barajar()
-                document.getElementById("empezar").style.display = "none"
-            }  
-
-            /*Boton1*/
-            function click1(){
-                document.getElementById("x").innerHTML = tablero1[0]
-                if(vb1 == false){
-                     valor1 = tablero1[0]
-                        if(valor1 == 0){
-                            vb1 = true;
-                            console.log("Bien1")
-                        }else{
-                            alert("Has fallado")
+                        if(y == x){
+                            do{
+                                y = Math.floor(Math.random() * 4)
+                            }while(x == y)
                         }
-                }else if(vb1 == true && vb2 == false){
-                    valor2 = tablero1[0]
-                        if(valor2 == 1){
-                            vb2 = true;
-                            console.log("Bien2")
-                        }else{
-                            alert("Has fallado")
+
+                        if(z == x || z == y){
+                            do{
+                                z = Math.floor(Math.random() * 4)
+                            }while(z == x || z == y)
                         }
-                } else if(vb1 == true && vb2 == true && vb3== false){
-                    valor3 = tablero1[0]
-                        if(valor3 == 2){
-                            vb3 = true;
-                            console.log("Bien3")
-                        }else{
-                            alert("Has fallado")
+
+                        if(j == x || j == y || j == z){
+                            do{
+                                j = Math.floor(Math.random() * 4)
+                            }while(j == x || j == y || j == z)
                         }
-                } else if(vb1 == true && vb2 == true && vb3== true && valor4 == false){
-                    valor4 = tablero1[0]
-                        if(valor4 == 3){
-                            vb4 = true;
-                            console.log("Has ganado")
                             
-                        }else{
-                            alert("Has fallado")
-                        }
-                }
-            }    
+
+                        tablero1[0] = x
+                        tablero1[1] = y
+                        tablero1[2] = z
+                        tablero1[3] = j
+
+                        console.log("[ " + tablero1[0] + "," + tablero1[1] + "," + tablero1[2] + "," + tablero1[3] + "]")
+
+                 }
+
+                 function empezarjuego(){
+                    barajar()
+                    document.getElementById("empezar").style.display = "none"
+                 }  
+
+                /*Boton1*/
+                 function click1(){
+                     document.getElementById("x").innerHTML = tablero1[0]
+                    if(vb1 == false){
+                        valor1 = tablero1[0]
+                            if(valor1 == 0){
+                                vb1 = true;
+                                console.log("Bien1")
+                            }else{
+                                alert("Has fallado")
+                            }
+                    }else if(vb1 == true && vb2 == false){
+                        valor2 = tablero1[0]
+                            if(valor2 == 1){
+                                vb2 = true;
+                                console.log("Bien2")
+                            }else{
+                                alert("Has fallado")
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== false){
+                        valor3 = tablero1[0]
+                            if(valor3 == 2){
+                                vb3 = true;
+                                console.log("Bien3")
+                            }else{
+                                alert("Has fallado")
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && valor4 == false){
+                        valor4 = tablero1[0]
+                            if(valor4 == 3){
+                                vb4 = true;
+                                console.log("Has ganado")
+                                
+                            }else{
+                                alert("Has fallado")
+                            }
+                    }
+                }    
                
                 /*Boton2*/
-                 function click2(){
+                function click2(){
                     document.getElementById("y").innerHTML = tablero1[1]
                     if(vb1 == false){
                         valor1 = tablero1[1]
@@ -163,7 +168,7 @@
                 }
 
                  /*Boton3*/
-                 function click3(){
+                function click3(){
                     document.getElementById("z").innerHTML = tablero1[2]
                     if(vb1 == false){
                         valor1 = tablero1[2]
@@ -202,7 +207,7 @@
                 }
 
                  /*Boton4*/
-                 function click4(){
+                function click4(){
                     document.getElementById("j").innerHTML = tablero1[3]
                     if(vb1 == false){
                         valor1 = tablero1[3]
@@ -239,7 +244,30 @@
                             }
                     }    
                 }
-            
+
+                function Tiempo(){
+                    fondo_numeros()
+                    setTimeout(function(){ fondo_blanco(); }, 1000)
+                }
+
+                function fondo_numeros(){
+                    boton1 = tablero1[0]
+                    boton2 = tablero1[1]
+                    boton3 = tablero1[2]
+                    boton4 = tablero1[3]
+
+                    document.getElementById("x").innerHTML = boton1;
+                    document.getElementById("y").innerHTML = boton2;
+                    document.getElementById("z").innerHTML = boton3;
+                    document.getElementById("j").innerHTML = boton4;
+                }
+
+                function fondo_blanco(){
+                    document.getElementById("x").innerHTML = "";
+                    document.getElementById("y").innerHTML = "";
+                    document.getElementById("z").innerHTML = "";
+                    document.getElementById("j").innerHTML = "";
+                }
         </script> 
     </body>
 </html>

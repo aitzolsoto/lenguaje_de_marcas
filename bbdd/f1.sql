@@ -87,7 +87,8 @@ having count(r.posicion) >= 2
 -- 14.-Las naciones con el nombre del circuito o especificando que no tiene circuito
 
 /*Para seleccionar los que son null tambien LEFT JOIN*/
-select pais, ifnull(nombre, "No tiene circuito") from naciones LEFT JOIN  circuitos on clave_nacion = nacion
+select pais, ifnull(nombre, "No tiene circuito") 
+from naciones LEFT JOIN  circuitos on clave_nacion = nacion
 /*
 +----------------+------------------------------------+
 | pais           | ifnull(nombre,'No tiene circuito') |
