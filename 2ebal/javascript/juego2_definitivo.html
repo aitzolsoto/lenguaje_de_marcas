@@ -1,0 +1,554 @@
+<html>
+<head>
+
+    <style>
+        .flex-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+        .flex-container > div{
+            margin-top: 30px
+        }
+
+        .boton_juego{
+            width: 150px;
+            height: 300px;
+            background-color: rgb(13, 55, 241);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 50px;
+            color: rgb(255, 238, 0);
+        }
+
+        .boton_empezar{
+            margin-top: 10px;
+            font-size: 18px;
+            background-color: whitesmoke;
+        }
+
+        .boton_siguiente{
+            margin-top: 10px;
+            font-size: 18px;
+            background-color: greenyellow;
+        }
+
+        .boton_reiniciar{
+            margin-top: 10px;
+            font-size: 18px;
+            background-color: rgb(235, 45, 45);
+        }
+
+        .texto{
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+    </style>
+</head>
+    <body>
+        
+        <div class="flex-container">
+           <div>
+            <p id="aciertos" class="texto">Aciertos: 0</p>
+           </div>
+
+            <div>
+                <button  class="boton_juego" id="x" onclick="click1()"></button>
+                <button class="boton_juego" id="y" onclick="click2()"></button>
+                <button class="boton_juego" id="z" onclick="click3()"></button>
+                <button class="boton_juego" id="j" onclick="click4()"></button>
+                <button class="boton_juego" id="p" onclick="click5()"></button>
+               
+            </div>
+
+           
+
+             <div>
+                    <button class="boton_empezar" id="empezar" onclick="empezarjuego()">Empezar juego</button>
+                    <button class="boton_siguiente" id="siguiente" onclick="siguiente()" style="display: none;">Siguiente</button>
+                    <button class="boton_reiniciar" id="reiniciar" onclick="boton_reiniciar()" style="display: none;">Reiniciar</button>
+             </div>
+        </div>
+        
+
+        <script>
+            var tablero1 = [0,0,0,0,0],
+                 x, y, z, j, p,
+                 valor,
+                 vb1 = false, vb2 = false, vb3 = false, vb4 = false,vb5 = false 
+                 aciertos = 0
+                               
+                             
+            
+
+                function barajar(){
+                
+                    /*Primera linea*/
+                    x = Math.floor(Math.random() * 5)
+                    y = Math.floor(Math.random() * 5)
+                    z =  Math.floor(Math.random() * 5)
+                    j = Math.floor(Math.random() * 5)
+                    p = Math.floor(Math.random() * 5)
+                    
+
+                        if(y == x){
+                            do{
+                                y = Math.floor(Math.random() * 5)
+                            }while(x == y)
+                        }
+
+                        if(z == x || z == y){
+                            do{
+                                z = Math.floor(Math.random() * 5)
+                            }while(z == x || z == y)
+                        }
+
+                        if(j == x || j == y || j == z){
+                            do{
+                                j = Math.floor(Math.random() * 5)
+                            }while(j == x || j == y || j == z)
+                        }
+
+                        if(p == x || p == y || p == z || p == j){
+                            do{
+                                p = Math.floor(Math.random() * 5)
+                            }while(p == x || p == y || p == z || p == j)
+                        }
+                            
+
+                        tablero1[0] = x
+                        tablero1[1] = y
+                        tablero1[2] = z
+                        tablero1[3] = j
+                        tablero1[4] = p
+
+                        console.log("[ " + tablero1[0] + "," + tablero1[1] + "," + tablero1[2] + "," + tablero1[3] + "]")
+
+                 }
+
+                
+                /*Boton1*/
+                 function click1(){
+                     document.getElementById("x").disabled = true;
+                     document.getElementById("x").innerHTML = tablero1[0]
+                    if(vb1 == false){
+                        valor = tablero1[0]
+                            if(valor == 0){
+                                vb1 = true;
+                                console.log("Bien1")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }else if(vb1 == true && vb2 == false){
+                        valor = tablero1[0]
+                            if(valor == 1){
+                                vb2 = true;
+                                console.log("Bien2")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== false){
+                        valor = tablero1[0]
+                            if(valor == 2){
+                                vb3 = true;
+                                console.log("Bien3")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == false){
+                        valor = tablero1[0]
+                            if(valor == 3){
+                                vb4 = true;
+                                console.log("Bien4")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == true && vb5 == false){
+                        valor = tablero1[0]
+                            if(valor == 4){
+                                vb5 = true;
+                                console.log("Has ganado")
+                                document.getElementById("siguiente").style.display = "block"
+                                aciertos = aciertos + 1
+                                document.getElementById("aciertos").innerHTML = "Aciertos: " + aciertos
+                                fondo_blanco() 
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }
+                }    
+               
+                /*Boton2*/
+                function click2(){
+                    document.getElementById("y").disabled = true;
+                    document.getElementById("y").innerHTML = tablero1[1]
+                    if(vb1 == false){
+                        valor = tablero1[1]
+                            if(valor == 0){
+                                vb1 = true;
+                                console.log("Bien1")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }else if(vb1 == true && vb2 == false){
+                        valor = tablero1[1]
+                            if(valor == 1){
+                                vb2 = true;
+                                console.log("Bien2")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== false){
+                        valor = tablero1[1]
+                            if(valor == 2){
+                                vb3 = true;
+                                console.log("Bien3")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == false){
+                        valor = tablero1[1]
+                            if(valor == 3){
+                                vb4 = true;
+                                console.log("Has ganado")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == true && vb5 == false){
+                        valor = tablero1[1]
+                            if(valor == 4){
+                                vb5 = true;
+                                console.log("Has ganado")
+                                document.getElementById("siguiente").style.display = "block"
+                                aciertos = aciertos + 1
+                                document.getElementById("aciertos").innerHTML = "Aciertos: " + aciertos
+                                fondo_blanco() 
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }   
+                }
+
+                 /*Boton3*/
+                function click3(){
+                    document.getElementById("z").disabled = true;
+                    document.getElementById("z").innerHTML = tablero1[2]
+                    if(vb1 == false){
+                        valor = tablero1[2]
+                            if(valor == 0){
+                                vb1 = true;
+                                console.log("Bien1")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }else if(vb1 == true && vb2 == false){
+                        valor = tablero1[2]
+                            if(valor == 1){
+                                vb2 = true;
+                                console.log("Bien2")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== false){
+                        valor = tablero1[2]
+                            if(valor == 2){
+                                vb3 = true;
+                                console.log("Bien3")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == false){
+                        valor = tablero1[2]
+                            if(valor == 3){
+                                vb4 = true;
+                                console.log("Has ganado")
+                               
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == true && vb5 == false){
+                        valor = tablero1[2]
+                            if(valor == 4){
+                                vb5 = true;
+                                console.log("Has ganado")
+                                document.getElementById("siguiente").style.display = "block"
+                                aciertos = aciertos + 1
+                                document.getElementById("aciertos").innerHTML = "Aciertos: " + aciertos
+                                fondo_blanco() 
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }      
+                }
+
+                 /*Boton4*/
+                function click4(){
+                    document.getElementById("j").disabled = true;
+                    document.getElementById("j").innerHTML = tablero1[3]
+                    if(vb1 == false){
+                        valor = tablero1[3]
+                            if(valor == 0){
+                                vb1 = true;
+                                console.log("Bien1")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }else if(vb1 == true && vb2 == false){
+                        valor = tablero1[3]
+                            if(valor == 1){
+                                vb2 = true;
+                                console.log("Bien2")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== false){
+                        valor = tablero1[3]
+                            if(valor == 2){
+                                vb3 = true;
+                                console.log("Bien3")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == false){
+                        valor = tablero1[3]
+                            if(valor == 3){
+                                vb4 = true;
+                                console.log("Has ganado")
+                                
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == true && vb5 == false){
+                        valor = tablero1[3]
+                            if(valor == 4){
+                                vb5 = true;
+                                console.log("Has ganado")
+                                document.getElementById("siguiente").style.display = "block"
+                                aciertos = aciertos + 1
+                                document.getElementById("aciertos").innerHTML = "Aciertos: " + aciertos
+                                fondo_blanco() 
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }      
+                }
+
+                /*Boton5*/
+                function click5(){
+                    document.getElementById("p").disabled = true;
+                    document.getElementById("p").innerHTML = tablero1[4]
+                    if(vb1 == false){
+                        valor = tablero1[4]
+                            if(valor == 0){
+                                vb1 = true;
+                                console.log("Bien1")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }else if(vb1 == true && vb2 == false){
+                        valor = tablero1[4]
+                            if(valor == 1){
+                                vb2 = true;
+                                console.log("Bien2")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== false){
+                        valor = tablero1[4]
+                            if(valor == 2){
+                                vb3 = true;
+                                console.log("Bien3")
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == false){
+                        valor = tablero1[4]
+                            if(valor == 3){
+                                vb4 = true;
+                                console.log("Has ganado")
+                                
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    } else if(vb1 == true && vb2 == true && vb3== true && vb4 == true && vb5 == false){
+                        valor = tablero1[4]
+                            if(valor == 4){
+                                vb5 = true;
+                                console.log("Has ganado")
+                                document.getElementById("siguiente").style.display = "block"
+                                aciertos = aciertos + 1
+                                document.getElementById("aciertos").innerHTML = "Aciertos: " + aciertos
+                                fondo_blanco() 
+                            }else{
+                                alert("Has fallado")
+                                bloquear_botones()
+                                document.getElementById("reiniciar").style.display = "block"
+                            }
+                    }      
+                }
+
+                /*Cuenta atras de los numeros*/
+                function Tiempo(){
+                    if(aciertos < 10){
+                        fondo_numeros()   
+                    }else{
+                        fondo_numeros2()
+                    }
+                    
+                    if(aciertos >= 0 && aciertos < 3){
+                            setTimeout(function(){ fondo_blanco(); }, 1000) 
+                     } else if (aciertos >= 3 && aciertos < 5){
+                            setTimeout(function(){ fondo_blanco(); }, 500)
+                     } else if (aciertos >= 5 && aciertos < 8){
+                            setTimeout(function(){ fondo_blanco(); }, 250)
+                     } else if (aciertos >= 8 && aciertos < 10){
+                            setTimeout(function(){ fondo_blanco(); }, 125)
+                     } else if (aciertos >= 10 && aciertos < 15){
+                            setTimeout(function(){ fondo_blanco(); }, 75)
+                     } else if (aciertos >= 15 ){
+                            setTimeout(function(){ fondo_blanco(); }, 20)
+                     }    
+                }
+
+                /*Aparecen los numeros*/
+                function fondo_numeros(){
+                    boton1 = tablero1[0]
+                    boton2 = tablero1[1]
+                    boton3 = tablero1[2]
+                    boton4 = tablero1[3]
+                    boton5 = tablero1[4]
+
+                    document.getElementById("x").innerHTML = boton1;
+                    document.getElementById("y").innerHTML = boton2;
+                    document.getElementById("z").innerHTML = boton3;
+                    document.getElementById("j").innerHTML = boton4;
+                    document.getElementById("p").innerHTML = boton5;
+                }
+
+                function fondo_numeros2(){
+                    boton1 = tablero1[0]
+                    boton2 = tablero1[1]
+                    boton3 = tablero1[2]
+                    boton4 = tablero1[3]
+
+                    document.getElementById("x").innerHTML = boton1;
+                    document.getElementById("y").innerHTML = boton2;
+                    document.getElementById("z").innerHTML = boton3;
+                    document.getElementById("j").innerHTML = boton4;
+                    
+                }
+
+                /*Aparece el fondo blanco*/
+                function fondo_blanco(){
+                    document.getElementById("x").innerHTML = "";
+                    document.getElementById("y").innerHTML = "";
+                    document.getElementById("z").innerHTML = "";
+                    document.getElementById("j").innerHTML = "";
+                    document.getElementById("p").innerHTML = "";
+                }
+
+                /*Los booleans para comprobar si se ha usado se reinician*/
+                function reiniciar_valores(){
+                    vb1 = false
+                    vb2 = false
+                    vb3 = false
+                    vb4 = false
+                    vb5 = false
+                }
+
+                /*Los botones se activan de nuevo*/
+                function reiniciar_botones(){
+                    document.getElementById("x").disabled = false;
+                    document.getElementById("y").disabled = false;
+                    document.getElementById("z").disabled = false;
+                    document.getElementById("j").disabled = false;
+                    document.getElementById("p").disabled = false;
+                }
+
+                function bloquear_botones(){
+                    document.getElementById("x").disabled = true;
+                    document.getElementById("y").disabled = true;
+                    document.getElementById("z").disabled = true;
+                    document.getElementById("j").disabled = true;
+                    document.getElementById("p").disabled = true;
+                }
+
+                /*Boton para empezar el juego*/
+                function empezarjuego(){
+                    barajar()
+                    document.getElementById("empezar").style.display = "none"
+                    Tiempo()
+                }  
+
+                /*Boton Siguiente*/
+                function siguiente(){
+                    document.getElementById("siguiente").style.display = "none"
+                    reiniciar_botones()
+                    reiniciar_valores()
+                    empezarjuego()
+                }
+
+                function boton_reiniciar(){
+                    aciertos = 0;
+                    reiniciar_botones()
+                    reiniciar_valores()
+                    fondo_blanco()
+                    document.getElementById("aciertos").innerHTML = "Aciertos : 0"
+                    document.getElementById("reiniciar").style.display = "none"
+                    document.getElementById("empezar").style.display = "block"
+                }                
+
+
+        </script> 
+    </body>
+</html>
