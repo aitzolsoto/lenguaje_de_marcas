@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+      .letra_titulo{
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+  </style>
+</head>
+<body>
+    <div class="container-fluid bg-dark text-warning">
+        <div class="d-flex justify-content-center">
+            <img src="img/logodef.png" width="300" class="justify-content-center">
+        </div>   
+    </div>
+
+    <!--Titulo-->
+    <div class="container">
+        <div class="row mt-5 ml-5">
+            <!--Aventador-->
+            <div class="col ml-4"> 
+                <h1 class="display-4">Aventador</h1>            
+            </div> 
+                
+            <!--Huracan-->
+            <div class="col ml-5"> 
+                <h1 class="display-4">Huracán</h1>
+            </div>  
+                
+            <!--Urus-->
+            <div class="col ml-5"> 
+                <h1 class="display-4">Urus</h1>
+            </div>         
+        </div>
+
+        <!--Imagenes-->
+        <div class="row mt-2 ml-5">
+            <!--Aventador-->
+            <div class="col ">  
+                <img id="aventador" src="img/aventador1.jpg" width="250" class="rounded-circle mt-5">         
+            </div> 
+                
+            <!--Huracan-->
+            <div class="col "> 
+                <img id="huracan" src="img/huracan1.jpg" width="250" class="rounded-circle mt-5">
+            </div>  
+                
+            <!--Urus-->
+            <div class="col "> 
+                <img id="urus" src="img/urus1.jpg" width="250" class="rounded-circle mt-5">
+            </div>         
+        </div>
+
+        <!--Botones -->
+        <div class="row mt-2 ml-5">
+            <!--Aventador-->
+            <div class="col ml-5 mt-5">  
+                <button type="button" class="btn btn-success" onclick="anterior_1()">Anterior</button>    
+                <button type="button" class="btn btn-success" onclick="siguiente_1()">Siguiente</button>     
+            </div> 
+                
+            <!--Huracan-->
+            <div class="col ml-5 mt-5"> 
+                <button type="button" class="btn btn-warning" onclick="anterior_2()">Anterior</button>
+                <button type="button" class="btn btn-warning" onclick="siguiente_2()">Siguiente</button>
+            </div>  
+                
+            <!--Urus-->
+            <div class="col ml-5 mt-5"> 
+                <button type="button" class="btn btn-dark" onclick="anterior_3()">Anterior</button>
+                <button type="button" class="btn btn-dark" onclick="siguiente_3()">Siguiente</button>
+            </div>         
+        </div>
+
+        <!--Texto-->
+        <div class="row mt-2 ml-5">
+            <!--Aventador-->
+            <div class="col mt-4 mr-4 ">  
+                <p class="text-center">El <mark>Lamborghini Aventador</mark> es un automóvil superdeportivo biplaza coupé del fabricante italiano Lamborghini.
+                     Fue concebido para reemplazar al Murciélago, como el nuevo modelo tope de gama.</p>   
+            </div> 
+                
+            <!--Huracan-->
+            <div class="col mt-4 mr-4"> 
+                <p class="text-center">El <mark>Lamborghini Huracán</mark> 
+                    es un automóvil deportivo de alto rendimiento producido por la casa italiana Lamborghini,
+                     es el sucesor del Lamborghini Gallardo.</p> 
+            </div>  
+                
+            <!--Urus-->
+            <div class="col mt-4"> 
+                <p class="text-center">El <mark>Lamborghini Urus</mark> es un SUV diseñado por Lamborghini.
+                    El nombre proviene del Urus, el antepasado del ganado doméstico moderno, también conocido como el Bos primigenius.
+                </p> 
+            </div>         
+        </div>
+
+        <!--Tabla-->
+        <table class="table">
+            <thead>
+                <th>Modelo</th>
+                <th>Potencia</th>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Aventador</td>
+                    <td>740 CV</td>
+                </tr>
+
+                <tr>
+                    <td>Huracán</td>
+                    <td>640 CV</td>
+                </tr>
+
+                <tr>
+                    <td>Urus</td>
+                    <td>650 CV</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+       /*Aventador*/
+        function anterior_1(){
+            document.getElementById("aventador").src="img/aventador1.jpg"
+        }
+
+        function siguiente_1(){
+            document.getElementById("aventador").src="img/aventador2.jpg"
+        }
+
+        /*Huracan*/
+        function anterior_2(){
+            document.getElementById("huracan").src="img/huracan1.jpg"
+        }
+
+        function siguiente_2(){
+            document.getElementById("huracan").src="img/huracan3.jpg"
+        }
+
+        /*Urus*/
+        /*Huracan*/
+        function anterior_3(){
+            document.getElementById("urus").src="img/urus1.jpg"
+        }
+
+        function siguiente_3(){
+            document.getElementById("urus").src="img/urus2.jpg"
+        }
+    </script>
+  
+</body>
+</html>
