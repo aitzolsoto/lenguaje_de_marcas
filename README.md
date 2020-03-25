@@ -15,3 +15,6 @@ https://aitzolsoto.github.io/lenguaje_de_marcas/2ebal/javascript/juego2_definiti
 
 ### Semana 1
 https://aitzolsoto.github.io/lenguaje_de_marcas/semana1/ejercicio_semana1_v2.html
+
+### Semana 2
+https://aitzolsoto.github.io/lenguaje_de_marcas/Ejercicios/semana2/ejercicio_semana2_v3.html
