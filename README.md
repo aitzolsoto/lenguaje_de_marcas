@@ -18,3 +18,6 @@ https://aitzolsoto.github.io/lenguaje_de_marcas/semana1/ejercicio_semana1_v2.htm
 
 ### Semana 2
 https://aitzolsoto.github.io/lenguaje_de_marcas/Ejercicios/semana2/ejercicio_semana2_v3.html
+
+### Semana 3
+https://aitzolsoto.github.io/lenguaje_de_marcas/Ejercicios/semana2/ejercicio_semana3.html
